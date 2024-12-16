@@ -29,6 +29,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-image: url('./assets/BACKGROUNDIMAGE.jpg');
+ 
+  background-size: cover;  /* Ensures the image covers the full body */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat; 
 }
 
 h1 {
