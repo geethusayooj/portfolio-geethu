@@ -4,7 +4,7 @@ import './App.css'
 import Navbar from "./components/Navbar/Navbar";
 import AboutPage from './Pages/AboutPage/AboutPage';
 import Education from './Pages/Education/Education';
-import Home from './Pages/home';
+import Home from './Pages/Home';
 import Skills from './Pages/skills';
 import Experience from './Pages/Experience/Experience';
 import Projects from './Pages/Projects';
