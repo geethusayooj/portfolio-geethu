@@ -3,7 +3,7 @@ import React from 'react';
 const Experience = () => {
   return (
     <section id="experience">
-      <h2>Experience</h2>
+      
       <div className="experience-card">
         <h3>Junior Assistant IT</h3>
         <p>Macom IT Solutions, Kerala, India (July 2021 - May 2022)</p>

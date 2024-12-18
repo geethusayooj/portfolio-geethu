@@ -1,0 +1,101 @@
+/* General Styles */
+#experience {
+    background-color: #f9f9f9; /* Light background to contrast black text */
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #000; /* Black text color */
+  }
+  
+  #experience h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #000; /* Ensure black heading color */
+  }
+  
+  /* Experience Card Styles */
+  .experience-card {
+    background-color: #fff; /* White card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .experience-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: #000; /* Black title color */
+  }
+  
+  .experience-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #333; /* Slightly lighter than black for differentiation */
+  }
+  
+  .experience-card ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .experience-card ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #000; /* Black text color for list items */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #experience {
+      padding: 30px 10px;
+    }
+  
+    .experience-card {
+      padding: 20px;
+    }
+  
+    #experience h2 {
+      font-size: 2rem;
+    }
+  
+    .experience-card h3 {
+      font-size: 1.5rem;
+    }
+  
+    .experience-card p, 
+    .experience-card ul li {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Optional Styling to make the layout look more balanced */
+  body {
+    background-color: #f4f4f9; /* Slightly off-white background */
+    font-family: 'Arial', sans-serif;
+  } 
+  
+  /* Utility Class for adding spacing */
+  .mb-20 {
+    margin-bottom: 20px;
+  } 
+  
+  /* Custom Scrollbar (Optional) */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }

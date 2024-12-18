@@ -6,29 +6,34 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #030303;
   }
   
   .about-summary {
     font-size: 1.2rem;
-    line-height: 1.6;
+    
+    line-height: 1;
     max-width: 800px;
-    margin: 0 auto 40px;
-    color: #555;
+    color: #131111;
+    display: flex;
+    justify-content: left;
   }
   
   .about-highlights-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #060607;
   }
   
   .about-highlights-list {
     list-style-type: none;
     padding: 0;
     max-width: 600px;
-    margin: 0 auto;
+  
+    color: #060607;
+    display: flex;
+    
   }
   
   .about-highlights-list li {
@@ -37,6 +42,9 @@
     margin-bottom: 15px;
     position: relative;
     padding-left: 25px;
+    color: #060607;
+    display: flex;
+   
   }
   
   .about-highlights-list li::before {

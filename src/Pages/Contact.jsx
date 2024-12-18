@@ -21,7 +21,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h2>Get in Touch</h2>
+      {/* <h2>Get in Touch</h2>
       <p>Have a question, want to work together, or just want to say hi? Feel free to reach out!</p>
       <form onSubmit={handleSubmit}>
         <input
@@ -52,7 +52,7 @@ const Contact = () => {
           onChange={handleChange}
         ></textarea>
         <button type="submit">Send</button>
-      </form>
+      </form> */}
 
       <div className="contact-details">
         <p>Email: <a href="mailto:geethuramesh2.de@gmail.com">geethuramesh2.de@gmail.com</a></p>

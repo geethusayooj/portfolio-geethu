@@ -27,7 +27,7 @@ const EducationCard = ({ title, institution, location, duration, description }) 
 // Certificate Card Component
 const CertificateCard = ({ title, issuer, duration, downloadableLink }) => {
   return (
-    <Card sx={{ maxWidth: 345, marginBottom: 2 }}>
+    <Card sx={{ maxWidth: 375, marginBottom: 2, alignItems:"center" }}>
       <CardContent>
         <Typography variant="h6" component="div">
           {title}
@@ -55,7 +55,7 @@ const Education = () => {
        
       </Typography>
 
-      <Box>
+      <Box sx={{ display: "flex" , gap:20 }}>
         {/* Education Cards */}
         <EducationCard
           title="Full Stack Web Development"
@@ -80,19 +80,21 @@ const Education = () => {
         />
       </Box>
 
-      <Typography variant="h4" gutterBottom sx={{ marginTop: 4 }}>
+      <Typography variant="h6" gutterBottom sx={{ marginTop: 4 , color: "black", marginLeft:5}}>
         Certificates & Achievements
       </Typography>
 
       <Box>
-        {/* Certificate Cards */}
-        <CertificateCard
-          title="Ironhack Full Stack Web Development Bootcamp"
-          issuer="Ironhack"
-          duration="September 2024 - December 2024"
-          downloadableLink="path_to_certificate.pdf"  // Replace with actual certificate link if available
-        />
-      </Box>
+  {/* Certificate Cards */}
+  <CertificateCard 
+    sx={{ display: "flex", alignItems: "center" }} 
+    title="Ironhack Full Stack Web Development Bootcamp"
+    issuer="Ironhack"
+    duration="September 2024 - December 2024"
+    downloadableLink="https://www.credential.net/ff2d2d10-f652-42e5-aaa5-25425fa90c80#acc.AaFWvckP"
+  />
+</Box>
+
     </Box>
   );
 };
