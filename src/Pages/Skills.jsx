@@ -1,24 +1,54 @@
 import React from 'react';
+import './Skills.css';
+
+const skillGroups = [
+  {
+    category: "Frontend",
+    icon: "🖥️",
+    skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "TypeScript", "Material UI", "Bootstrap", "Responsive Design"],
+  },
+  {
+    category: "Backend",
+    icon: "⚙️",
+    skills: ["Node.js", "Express.js", "RESTful APIs", "JWT Authentication", "MongoDB", "PostgreSQL", "Prisma"],
+  },
+  {
+    category: "Tools & Workflow",
+    icon: "🛠️",
+    skills: ["Git", "GitHub", "Postman", "Axios / Fetch", "Scrum / Agile", "Jasmine", "Vite"],
+  },
+  {
+    category: "Soft Skills",
+    icon: "💡",
+    skills: ["Attention to Detail", "Problem Solving", "Teamwork", "Adaptability", "Communication"],
+  },
+];
 
 const Skills = () => {
   return (
-    <section id="skills">
-      <h2>Skills</h2>
-      <div className="skill-category">
-        <h3>Frontend</h3>
-        <p>HTML, CSS, JavaScript, React, Material UI, Bootstrap, Responsive Design</p>
-      </div>
-      <div className="skill-category">
-        <h3>Backend</h3>
-        <p>Node.js, Express.js, RESTful APIs, JWT Authentication, PostgreSQL, MongoDB</p>
-      </div>
-      <div className="skill-category">
-        <h3>Development Tools</h3>
-        <p>Git, GitHub, Postman, Scrum, Jasmine, TypeScript, API Communication (Axios, Fetch)</p>
-      </div>
-      <div className="skill-category">
-        <h3>Soft Skills</h3>
-        <p>Attention to Detail, Problem Solving, Teamwork, Adaptability</p>
+    <section className="section section-alt">
+      <div className="container">
+        <p className="section-label">What I work with</p>
+        <h2 className="section-title">Skills</h2>
+        <p className="section-subtitle">
+          Technologies and tools I use to build full-stack web applications.
+        </p>
+
+        <div className="skills-grid">
+          {skillGroups.map((group) => (
+            <div key={group.category} className="skill-card">
+              <div className="skill-card-header">
+                <span className="skill-icon">{group.icon}</span>
+                <h3 className="skill-category">{group.category}</h3>
+              </div>
+              <div className="skill-tags">
+                {group.skills.map((skill) => (
+                  <span key={skill} className="skill-tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

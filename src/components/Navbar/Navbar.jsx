@@ -1,67 +1,39 @@
-import { Link, useNavigate,useLocation } from "react-router-dom";
-import React, { useEffect, useState } from "react";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import { NavLink } from "react-router-dom";
-
+import React, { useState, useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
+const navItems = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Education", path: "/education" },
+  { label: "Experience", path: "/experience" },
+  { label: "Projects", path: "/projects" },
+  { label: "Skills", path: "/skills" },
+  { label: "Contact", path: "/contact" },
+];
 
-function Navbar({ onSearch }) {
-  const [selectedTab, setSelectedTab] = useState("home");
-  const [searchInput, setSearchInput] = useState("");
- 
-  const navigate = useNavigate();
-  const location =useLocation();
-
-  useEffect(() =>{
-    setSelectedTab(location.pathname);
-  }, [location.pathname]);
-   
-  const handleInputChange = (e) => {
-    setSearchInput(e.target.value);
-  };
-
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    onSearch(searchInput); 
-    
-  };
+function Navbar() {
   return (
-    <nav className="Navbar">
-     
-      <Tabs
-        defaultValue={"home"}
-        value={selectedTab}
-        onChange={(e, v) => {navigate(v)}}
-        sx={{height:"100%"}}
-        classes={{ indicator: 'indicator'}}
-      >
-        
-        <Tab classes={{ root: 'tab' }} value={"/"} label="Home">
-          Home
-        </Tab>
-        <Tab classes={{ root: 'tab' }} value={"/about"} label="About">
-          About
-        </Tab>
-        <Tab classes={{ root: 'tab' }} value={"/education"} label="Education">
-          Education
-        </Tab>
-        <Tab classes={{ root: 'tab' }} value={"/experience"} label="Experience">
-         Experience
-        </Tab>
-        <Tab classes={{ root: 'tab' }} value={"/projects"} label="Projects">
-          Projects
-        </Tab>
-        <Tab classes={{ root: 'tab' }} value={"/skills"} label="Skills">
-          Skills
-        </Tab>
-        <Tab classes={{ root: 'tab' }} value={"/contact"} label="contact">
-         contact
-        </Tab>
-      </Tabs>
-      
-     
+    <nav className="navbar">
+      <div className="navbar-inner">
+        <NavLink to="/" className="navbar-brand">
+          Geethu <span>Pandath Ramesh</span>
+        </NavLink>
+        <div className="navbar-tabs">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              end={item.path === "/"}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </div>
+      </div>
     </nav>
   );
 }

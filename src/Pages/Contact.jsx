@@ -1,65 +1,71 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './Contact.css';
+
+const contactItems = [
+  {
+    label: "Email",
+    value: "geethuramesh2.de@gmail.com",
+    href: "mailto:geethuramesh2.de@gmail.com",
+    icon: "✉️",
+  },
+  {
+    label: "Phone",
+    value: "+49 176 7166 2908",
+    href: "tel:+4917671662908",
+    icon: "📞",
+  },
+  {
+    label: "Location",
+    value: "Berlin, Germany",
+    href: null,
+    icon: "📍",
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/geethu-pandath-ramesh-078288174",
+    href: "https://www.linkedin.com/in/geethu-pandath-ramesh-078288174",
+    icon: "💼",
+  },
+  {
+    label: "GitHub",
+    value: "github.com/geethusayooj",
+    href: "https://github.com/geethusayooj",
+    icon: "🐙",
+  },
+];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission (e.g., send data to server)
-    console.log(formData);
-  };
-
   return (
-    <section id="contact">
-      {/* <h2>Get in Touch</h2>
-      <p>Have a question, want to work together, or just want to say hi? Feel free to reach out!</p>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="subject"
-          placeholder="Subject"
-          value={formData.subject}
-          onChange={handleChange}
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          value={formData.message}
-          onChange={handleChange}
-        ></textarea>
-        <button type="submit">Send</button>
-      </form> */}
+    <section className="section">
+      <div className="container">
+        <p className="section-label">Let's connect</p>
+        <h2 className="section-title">Contact</h2>
+        <p className="section-subtitle">
+          I'm open to new opportunities, collaborations, or just a friendly chat. Feel free to reach out!
+        </p>
 
-      <div className="contact-details">
-        <p>Email: <a href="mailto:geethuramesh2.de@gmail.com">geethuramesh2.de@gmail.com</a></p>
-        <p>Phone: <a href="tel:+4917671662908">+49 176 7166 2908</a></p>
-        <p>Location: Berlin, Germany</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/geethu-pandath-ramesh-078288174" target="_blank" rel="noopener noreferrer">linkedin.com/in/geethu-pandath-ramesh</a></p>
-        <p>GitHub: <a href="https://github.com/geethusayooj" target="_blank" rel="noopener noreferrer">github.com/geethusayooj</a></p>
+        <div className="contact-grid">
+          {contactItems.map((item) => (
+            <div key={item.label} className="contact-card">
+              <span className="contact-icon">{item.icon}</span>
+              <div className="contact-info">
+                <span className="contact-label">{item.label}</span>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    className="contact-value"
+                    target={item.href.startsWith('http') ? '_blank' : undefined}
+                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  <span className="contact-value contact-value-plain">{item.value}</span>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

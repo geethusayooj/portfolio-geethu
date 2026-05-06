@@ -1,15 +1,43 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import resume from '../assets/resume.pdf';
+import './Home.css';
 
 const Home = () => {
   return (
-    <section id="home">
-      <h1>Hi, I’m Geethu Pandath Ramesh </h1>
-      <h2>Full Stack Engineer</h2>
-      <p>Turning ideas into impactful web applications with the power of the MERN stack.</p>
-      <a href={resume} target="_blank" rel="noopener noreferrer">
-        <button>View My Resume</button>
-      </a>
+    <section className="home-section">
+      <div className="container">
+        <div className="home-content">
+          <p className="home-greeting">Hi, I'm</p>
+          <h1 className="home-name">Geethu Pandath Ramesh</h1>
+          <h2 className="home-role">Full Stack Engineer</h2>
+          <p className="home-desc">
+            I build robust, user-centric web applications using the MERN stack.
+            Turning ideas into clean, scalable, and impactful digital experiences.
+          </p>
+          <div className="home-actions">
+            <a href={resume} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              View Resume
+            </a>
+            <Link to="/projects" className="btn-outline">
+              See My Work
+            </Link>
+          </div>
+          <div className="home-links">
+            <a href="https://github.com/geethusayooj" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            <span className="divider">·</span>
+            <a href="https://www.linkedin.com/in/geethu-pandath-ramesh-078288174" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+            <span className="divider">·</span>
+            <a href="mailto:geethuramesh2.de@gmail.com">
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

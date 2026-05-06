@@ -1,21 +1,48 @@
 import React from 'react';
 import './AboutPage.css';
 
+const highlights = [
+  "Strong proficiency in React.js, Node.js, Express.js, and RESTful APIs.",
+  "Hands-on experience with the full MERN stack — from database design to UI development.",
+  "Background spanning both education and industry, with a track record of delivering projects end-to-end.",
+  "Committed to continuous learning and staying current with web development trends.",
+];
+
 const AboutPage = () => {
   return (
-    <div className="about-page">
-      <h1 className="about-title">About Me</h1>
-      <p className="about-summary">
-        As a passionate Full Stack Engineer, I specialize in creating dynamic and user-centric web applications using the MERN (MongoDB, Express.js, React, Node.js) stack. I have a knack for translating design concepts into fully responsive, visually compelling, and highly functional user interfaces. With a background in teaching and software development, I bring a versatile approach to problem-solving and collaboration.
-      </p>
-      
-      <h2 className="about-highlights-title">Key Highlights</h2>
-      <ul className="about-highlights-list">
-        <li>Strong proficiency in React.js, Node.js, and RESTful APIs.</li>
-        <li>Experience in both educational and industry roles, with a history of successful project delivery.</li>
-        <li>Driven by continuous learning and committed to staying at the forefront of web development trends.</li>
-      </ul>
-    </div>
+    <section className="section">
+      <div className="container">
+        <p className="section-label">Get to know me</p>
+        <h2 className="section-title">About Me</h2>
+
+        <div className="about-grid">
+          <div className="about-text">
+            <p className="about-summary">
+              I'm a passionate Full Stack Engineer specialising in creating dynamic, user-centric
+              web applications with the MERN stack. I have a strong eye for translating design
+              concepts into responsive, visually compelling, and highly functional interfaces.
+            </p>
+            <p className="about-summary" style={{ marginTop: '16px' }}>
+              With a background in both teaching and software development, I bring a versatile
+              approach to problem-solving and team collaboration. I'm based in Berlin, Germany and
+              open to new opportunities.
+            </p>
+          </div>
+
+          <div className="about-highlights">
+            <h3 className="highlights-heading">Key Highlights</h3>
+            <ul className="highlights-list">
+              {highlights.map((item, i) => (
+                <li key={i} className="highlight-item">
+                  <span className="highlight-check">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
