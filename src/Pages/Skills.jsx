@@ -5,22 +5,32 @@ const skillGroups = [
   {
     category: "Frontend",
     icon: "🖥️",
-    skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "TypeScript", "Material UI", "Bootstrap", "Responsive Design"],
+    skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React.js", "Responsive Design", "Material UI", "Bootstrap", "Tailwind CSS", "Azure Maps SDK", "Vanilla JavaScript"],
   },
   {
-    category: "Backend",
+    category: "Backend & APIs",
     icon: "⚙️",
-    skills: ["Node.js", "Express.js", "RESTful APIs", "JWT Authentication", "MongoDB", "PostgreSQL", "Prisma"],
+    skills: ["PHP 7/8", "C# (.NET 8)", "Node.js", "Express.js", "RESTful APIs", "JWT Authentication", "ProcessWire CMS", "ASP.NET Core", "Azure Functions (Serverless)", "API Integration", "PDO", "Async/Await Programming"],
+  },
+  {
+    category: "Databases",
+    icon: "🗄️",
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "Azure SQL Database", "Azure Table Storage", "Prisma ORM", "SQL Query Optimization", "Database Design"],
+  },
+  {
+    category: "Cloud & DevOps",
+    icon: "☁️",
+    skills: ["Microsoft Azure", "Azure Functions", "Azure Monitor", "Azure Application Insights", "CI/CD Pipelines", "Bitbucket Pipelines", "GitHub Actions", "Azure CLI", "PowerShell", "Docker", "Git FTP Deployment"],
   },
   {
     category: "Tools & Workflow",
     icon: "🛠️",
-    skills: ["Git", "GitHub", "Postman", "Axios / Fetch", "Scrum / Agile", "Jasmine", "Vite"],
+    skills: ["Git", "GitHub", "Bitbucket", "Postman", "Jira", "Confluence", "VS Code", "Visual Studio", "Azure Functions Core Tools", "MSBuild / .NET CLI", "Agile / Scrum"],
   },
   {
     category: "Soft Skills",
     icon: "💡",
-    skills: ["Attention to Detail", "Problem Solving", "Teamwork", "Adaptability", "Communication"],
+    skills: ["Problem Solving", "Team Collaboration", "Adaptability", "Communication", "Attention to Detail", "Technical Documentation", "Mentoring & Teaching", "Analytical Thinking", "Agile Team Collaboration"],
   },
 ];
 

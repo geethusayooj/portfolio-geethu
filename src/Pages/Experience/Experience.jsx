@@ -3,7 +3,21 @@ import './Experience.css';
 
 const experiences = [
   {
-    role: "Junior Assistant IT",
+    role: "Full Stack Software Developer",
+    company: "POSTAL CONSULTING Rühl GmbH",
+    location: "Berlin, Germany",
+    duration: "November 2025 – Present",
+    points: [
+      "Built custom ProcessWire CMS modules with role-based access and dynamic dashboard features.",
+      "Integrated MySQL and Azure SQL databases for cross-platform data aggregation.",
+      "Developed CSV/Azure SQL import pipelines with encoding normalization and schema adaptation.",
+      "Automated deployments using Bitbucket Pipelines and git-ftp CI/CD workflows.",
+      "Collaborated in Agile teams using Jira and maintained technical documentation in Confluence.",
+      "Tech Stack: PHP 7/8, ProcessWire CMS, MySQL, Azure SQL, Azure Maps SDK, JavaScript, PDO, Git, Bitbucket, CI/CD.",
+    ],
+  },
+  {
+    role: "Software Developer",
     company: "Macom IT Solutions",
     location: "Kerala, India",
     duration: "July 2021 – May 2022",
@@ -11,6 +25,8 @@ const experiences = [
       "Developed server-side applications using ASP.NET, C#, and PL/SQL for the banking sector.",
       "Enhanced application performance, resolved bugs, and created SQL scripts.",
       "Built dynamic Crystal Reports to improve data analysis and client reporting.",
+      "Worked in Agile/Scrum development teams.",
+      "Implemented CI/CD workflows and testing pipelines.",
     ],
   },
   {
@@ -19,7 +35,8 @@ const experiences = [
     location: "Kerala, India",
     duration: "June 2019 – March 2020",
     points: [
-      "Taught core technical subjects including Computer Engineering, Digital Electronics, and Microprocessors.",
+      "Taught Embedded Systems, Digital Electronics, and Software Development.",
+      "Guided student projects in C, Python, and signal processing.",
     ],
   },
   {
@@ -29,6 +46,7 @@ const experiences = [
     duration: "February 2019 – June 2019",
     points: [
       "Conducted lectures on Communication Engineering and Circuit Design.",
+      "Assisted in laboratory and academic sessions for embedded systems and electronics.",
     ],
   },
   {

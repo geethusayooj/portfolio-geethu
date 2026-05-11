@@ -12,8 +12,7 @@ const Home = () => {
           <h1 className="home-name">Geethu Pandath Ramesh</h1>
           <h2 className="home-role">Full Stack Engineer</h2>
           <p className="home-desc">
-            I build robust, user-centric web applications using the MERN stack.
-            Turning ideas into clean, scalable, and impactful digital experiences.
+            I develop scalable full-stack applications, cloud services, and real-time systems using React, Node.js, PHP, .NET, and Azure technologies.
           </p>
           <div className="home-actions">
             <a href={resume} target="_blank" rel="noopener noreferrer" className="btn-primary">

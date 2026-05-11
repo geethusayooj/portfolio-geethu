@@ -2,10 +2,12 @@ import React from 'react';
 import './AboutPage.css';
 
 const highlights = [
-  "Strong proficiency in React.js, Node.js, Express.js, and RESTful APIs.",
-  "Hands-on experience with the full MERN stack — from database design to UI development.",
-  "Background spanning both education and industry, with a track record of delivering projects end-to-end.",
-  "Committed to continuous learning and staying current with web development trends.",
+  "Strong expertise in PHP, C# (.NET), JavaScript, React.js, Node.js, and RESTful APIs.",
+  "Hands-on experience building real-time geolocation and IoT tracking systems using Azure Functions, Azure SQL, Azure Maps, and cloud-native architectures.",
+  "Experienced in full-stack development — from backend APIs and database design to responsive frontend interfaces.",
+  "Skilled in CI/CD workflows, deployment automation, monitoring, and cloud infrastructure using Azure, Git, Bitbucket Pipelines, and PowerShell.",
+  "Background spanning both academia and industry, with experience delivering scalable applications and mentoring students in software and embedded systems.",
+  "Passionate about continuous learning, modern web technologies, cloud computing, and IoT-driven solutions.",
 ];
 
 const AboutPage = () => {
@@ -18,14 +20,19 @@ const AboutPage = () => {
         <div className="about-grid">
           <div className="about-text">
             <p className="about-summary">
-              I'm a passionate Full Stack Engineer specialising in creating dynamic, user-centric
-              web applications with the MERN stack. I have a strong eye for translating design
-              concepts into responsive, visually compelling, and highly functional interfaces.
+              I'm a passionate Full-Stack Developer specializing in building scalable web applications,
+              cloud-native services, and real-time tracking platforms. My experience spans modern web
+              development, Azure cloud technologies, IoT integrations, and geolocation-based systems.
             </p>
             <p className="about-summary" style={{ marginTop: '16px' }}>
-              With a background in both teaching and software development, I bring a versatile
-              approach to problem-solving and team collaboration. I'm based in Berlin, Germany and
-              open to new opportunities.
+              I enjoy developing efficient backend architectures, interactive user experiences, and
+              serverless cloud solutions using technologies like PHP, .NET, React, Node.js, Azure
+              Functions, SQL databases, and JavaScript.
+            </p>
+            <p className="about-summary" style={{ marginTop: '16px' }}>
+              With a background in both software development and teaching, I bring strong
+              problem-solving abilities, adaptability, and collaborative teamwork to every project.
+              Currently based in Berlin and open to new opportunities in Frontend, Backend, and Cloud.
             </p>
           </div>
 
